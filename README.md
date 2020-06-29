@@ -259,7 +259,7 @@ typedef enum : NSUInteger {
 ```
 
 ​       然后记得在异步Action执行完毕时，修改"isFinished"。
-```
+```objective-c
 @implementation TestAsyncRequestAction
 - (void)commondWithStore:(OresStore *)store {
    NSLog(@"测试参数:%@",store.state.testPara);
