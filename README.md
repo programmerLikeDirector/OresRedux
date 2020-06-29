@@ -12,7 +12,7 @@ An OC version of the Redux framework
 
 ​        onecat的这篇文章给了我最大的启发：
 
-​        [单向数据流动的函数式 View Controller](]https://onevcat.com/2017/07/state-based-viewcontroller/)
+​        [单向数据流动的函数式 View Controller](https://onevcat.com/2017/07/state-based-viewcontroller)
 
 ​        关于文中提到的Redux框架思想，还可以参看下面几篇文章：
 
