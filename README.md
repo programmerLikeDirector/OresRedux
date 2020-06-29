@@ -259,18 +259,17 @@ typedef enum : NSUInteger {
 ```
 
 ​       然后记得在异步Action执行完毕时，修改"isFinished"。
-
-       ```objective-c
-       @implementation TestAsyncRequestAction
-       - (void)commondWithStore:(OresStore *)store {
-             NSLog(@"测试参数:%@",store.state.testPara);
-             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
-                     NSLog(@"异步回调");
-                     self.isFinished = YES;
-             });
-         }
-       @end
-       ```
+```
+@implementation TestAsyncRequestAction
+- (void)commondWithStore:(OresStore *)store {
+   NSLog(@"测试参数:%@",store.state.testPara);
+   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
+      NSLog(@"异步回调");
+      self.isFinished = YES;
+   });
+}
+@end
+```
 
 ​       现在还剩最后一个问题有待处理，也是我还一直在思考的问题。
 
